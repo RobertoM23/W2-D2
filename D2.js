@@ -44,29 +44,39 @@ console.log("Totale da pagare: €" + totalToPay)
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
+let totalShoppingCart2 = 60 /* 80 */
+let discountedTotal = totalShoppingCart2 * 0.8
+let totalToPay2 = discountedTotal > 50 ? discountedTotal : discountedTotal + 10
+console.log("Totale da pagare: €" + totalToPay2.toFixed(2))
+/* con 80 viene un totale di 64€ perchè c'è la spedizione gratuita */
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
   Utilizzando un blocco condizionale, crea un algoritmo per ordinarle secondo il loro valore, dal più alto al più basso.
   Alla fine mostra il risultato in console.
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
+let c = 15, d = 30, e = 10
+if (c < d) [c, d] = [d, c]
+if (c < e) [c, e] = [e, c]
+if (d < e) [d, e] = [e, d]
+console.log("Numeri ordinati:", c, d, e)
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
-
+function isNumber(value) { if (typeof value === "number" && !isNaN(value))
+{ console.log("E' un numero")} else { console.log("Non è un numero") }
+}
+isNumber(10)
+isNumber("salve")
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
-
+function checkEvenOdd(number) { if (number % 2 === 0) { console.log("Il numero è pari")}
+else { console.log("Il numero è dispari")}
+}
+checkEvenOdd(12)
+checkEvenOdd(9)
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
   let val = 7
@@ -78,8 +88,10 @@ console.log("Totale da pagare: €" + totalToPay)
       console.log("Uguale a 10 o maggiore");
     }
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
+let val = 7
+if (val < 5) { console.log("Meno di 5")}
+ else if (val < 10) { console.log("Meno di 10")}
+  else { console.log("Uguale a 10 o maggiore")}
 
 /* ESERCIZIO 11
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
@@ -91,28 +103,29 @@ const me = {
   skills: ['javascript', 'html', 'css'],
 }
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+me.city = "Toronto"
+console.log(me)
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+delete me.lastName
+console.log(me)
 
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
-
+me.skills.pop()
+console.log(me)
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
-
+let numbers = []
+for (let i = 1; i <= 10; i++) { numbers.push(i)}
+console.log(numbers)
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
+numbers[9] = 100
+console.log(numbers)
